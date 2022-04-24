@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import Invoice from "../components/Invoice";
+import Invoice from "../components/InvoiceMain/Invoice";
 import { mapMutations, mapState } from "vuex";
 export default {
   name: "Home",

@@ -19,9 +19,9 @@
 
 <script>
 import { mapState, mapActions } from "vuex";
-import Navigation from "./components/Navigation";
-import InvoiceModal from "./components/InvoiceModal";
-import Modal from "./components/Modal";
+import Navigation from "./components/InvoiceMain/Navigation";
+import InvoiceModal from "./components/InvoiceMain/InvoiceModal";
+import Modal from "./components/InvoiceMain/Modal";
 export default {
   data() {
     return {
