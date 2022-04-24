@@ -32,7 +32,9 @@
       <Invoice v-for="(invoice, index) in filteredData" :invoice="invoice" :key="index" />
     </div>
     <div v-else class="empty flex flex-column">
-      <img src="@/assets/illustration-empty.svg" alt="" />
+      
+<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_9wkm6jar.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; z-index: 0;"  loop  autoplay></lottie-player>
+      <!-- <img src="@/assets/illustration-empty.svg" alt="" /> -->
       <h3>There is nothing here</h3>
       <p>Create a new invoice by clicking the New Invoice button and get started</p>
     </div>
@@ -94,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  color: #fff;
+  color: #ff6347;
 
   .header {
     margin-bottom: 65px;
@@ -133,7 +135,7 @@ export default {
           position: absolute;
           top: 25px;
           list-style: none;
-          background-color: #1e2139;
+          background-color: #ffffff;
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
           li {
@@ -151,8 +153,8 @@ export default {
 
       .button {
         padding: 8px 10px;
-        background-color: #7c5dfa;
-        border-radius: 40px;
+        background-color: tomato;
+        border-radius: 10px;
 
         .inner-button {
           margin-right: 8px;

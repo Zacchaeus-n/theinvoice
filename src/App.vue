@@ -67,7 +67,7 @@ export default {
 }
 
 .app {
-  background-color: #141625;
+  background-color: #ffffff;
   min-height: 100vh;
   @media (min-width: 900px) {
     flex-direction: row !important;
@@ -85,8 +85,8 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #141625;
-  color: #fff;
+  background-color: #ffffff;
+  color: tomato;
 
   p {
     margin-top: 16px;
@@ -109,7 +109,7 @@ button,
 .button {
   cursor: pointer;
   padding: 16px 24px;
-  border-radius: 30px;
+  border-radius: 10px;
   border: none;
   font-size: 12px;
   margin-right: 8px;

@@ -3,7 +3,7 @@
     <div class="modal-content">
       <p>Are you sure you want to exit? Your changes will not be saved?</p>
       <div class="actions flex">
-        <button @click="closeModal" class="purple">Return</button>
+        <button @click="closeModal" class="dark-purple">Return</button>
         <button @click="closeInvoice" class="red">Close</button>
       </div>
     </div>
@@ -39,6 +39,7 @@ export default {
 .modal {
   z-index: 100;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.314);
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -46,10 +47,11 @@ export default {
 
   .modal-content {
     border-radius: 20px;
+    border: 1px solid #e6e6e6;
     padding: 48px 32px;
     max-width: 450px;
-    background-color: #252945;
-    color: #fff;
+    background-color: #ffffff;
+    color: tomato;
 
     p {
       text-align: center;

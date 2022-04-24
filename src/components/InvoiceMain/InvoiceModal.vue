@@ -7,7 +7,7 @@
 
       <!-- Bill From -->
       <div class="bill-from flex flex-column">
-        <h4>Bill From</h4>
+        <h3>Bill From</h3>
         <div class="input flex flex-column">
           <label for="billerStreetAddress">Street Address</label>
           <input required type="text" id="billerStreetAddress" v-model="billerStreetAddress" />
@@ -30,7 +30,7 @@
 
       <!-- Bill To -->
       <div class="bill-to flex flex-column">
-        <h4>Bill To</h4>
+        <h3>Bill To</h3>
         <div class="input flex flex-column">
           <label for="clientName">Client's Name</label>
           <input required type="text" id="clientName" v-model="clientName" />
@@ -96,7 +96,7 @@
               <td class="qty"><input type="text" v-model="item.qty" /></td>
               <td class="price"><input type="text" v-model="item.price" /></td>
               <td class="total flex">${{ (item.total = item.qty * item.price) }}</td>
-              <img @click="deleteInvoiceItem(item.id)" src="@/assets/icon-delete.svg" alt="" />
+              <img @click="deleteInvoiceItem(item.id)" style="cursor: pointer" src="@/assets/icon-delete.svg" alt="" />
             </tr>
           </table>
 
@@ -114,7 +114,7 @@
         </div>
         <div class="right flex">
           <button v-if="!editInvoice" type="submit" @click="saveDraft" class="dark-purple">Save Draft</button>
-          <button v-if="!editInvoice" type="submit" @click="publishInvoice" class="purple">Create Invoice</button>
+          <button v-if="!editInvoice" type="submit" @click="publishInvoice" class="red">Create Invoice</button>
           <button v-if="editInvoice" type="sumbit" class="purple">Update Invoice</button>
         </div>
       </div>
@@ -123,8 +123,8 @@
 </template>
 
 <script>
-import db from "../firebase/firebaseInit";
-import Loading from "../components/Loading";
+import db from "../../firebase/firebaseInit";
+import Loading from "./Loading";
 import { mapActions, mapMutations, mapState } from "vuex";
 import { uid } from "uid";
 export default {
@@ -349,6 +349,7 @@ export default {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   height: 100vh;
   overflow: scroll;
@@ -364,13 +365,13 @@ export default {
     padding: 56px;
     max-width: 700px;
     width: 100%;
-    background-color: #141625;
-    color: #fff;
+    background-color: #ffffff;
+    color: tomato;
     box-shadow: 10px 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 
     h1 {
       margin-bottom: 48px;
-      color: #fff;
+      color: tomato;
     }
 
     h3 {
@@ -500,7 +501,7 @@ export default {
     background-color: #1e2139;
     color: #fff;
     border-radius: 4px;
-    padding: 12px 4px;
+    padding: 12px 10px;
     border: none;
 
     &:focus {
