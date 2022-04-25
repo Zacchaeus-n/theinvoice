@@ -32,7 +32,7 @@
       <Invoice v-for="(invoice, index) in filteredData" :invoice="invoice" :key="index" />
     </div>
     <div v-else class="empty flex flex-column">
-      
+      <!-- Animated box -->
 <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_9wkm6jar.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px; z-index: 0;"  loop  autoplay></lottie-player>
       <!-- <img src="@/assets/illustration-empty.svg" alt="" /> -->
       <h3>There is nothing here</h3>
